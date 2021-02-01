@@ -50,6 +50,8 @@ if __name__ == "__main__":
         model = tf_utils.model(config,emb_mtx,sess)
 
         obj, m_op, predicted_op_ner, actual_op_ner, predicted_op_rel, actual_op_rel, score_op_rel = model.run()
+        print(predicted_op_rel)
+
 
         train_step = model.get_train_op(obj)
 
